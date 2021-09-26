@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useMutation, gql } from "@apollo/client";
-import { GET_BLOGS } from "./App";
 
 const ADD_BLOG = gql`
   mutation AddBlog($title: String!, $desc: String!) {
@@ -29,13 +28,6 @@ function Add() {
     variables: {
       title,
       desc,
-    },
-    update(cache, { data: { addBlog } }) {
-      const { blogs } = cache.readQuery({ query: GET_BLOGS });
-      cache.writeQuery({
-        query: GET_BLOGS,
-        data: { blogs: blogs.concat([addBlog]) },
-      });
     },
   });
 
