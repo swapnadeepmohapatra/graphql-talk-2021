@@ -1,6 +1,7 @@
 import "./App.css";
 import { useQuery, gql } from "@apollo/client";
 import Card from "./Card";
+import Add from "./Add";
 
 const GET_BLOGS = gql`
   {
@@ -37,8 +38,10 @@ function App() {
           <Card data={blog} key={blog.id} />
         ))}
       </div>
+      <Add />
     </div>
   );
 }
 
 export default App;
+export { GET_BLOGS };
