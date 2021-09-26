@@ -1,38 +1,115 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.blog__card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid #eaeaea;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+  margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.blog__card__cover_image {
+  max-width: calc(23vw + 5px);
+}
+
+.blog__card__title {
+  text-align: left;
+  padding: 10px;
+}
+
+.blog__card__desc {
+  text-align: justify;
+  padding: 0px 10px;
+}
+
+.blog__card__author {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+
+.blog__card__author__image {
+  width: 30px;
+  height: 30px;
+}
+
+.blog__card__author__name {
+  padding-left: 10px;
+}
+
+.add {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.add__button {
+  background-color: #10389b;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: white;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.add__container {
+  padding: 30px;
+  background-color: #10389b;
+  color: white;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  border-radius: 10px;
+}
+
+.add__form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.add__form label {
+  margin-top: 10px;
+  margin-bottom: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add__form button {
+  margin-top: 20px;
+  padding: 2px;
+}
+
+.new_blog__popup {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%), 0 2px 15px 0 rgb(0 0 0 / 5%);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.new_blog__popup h2 {
+  min-width: 15vw;
+}
+.new_blog__popup p,
+.new_blog__popup h3 {
+  text-align: left;
 }
