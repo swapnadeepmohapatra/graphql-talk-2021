@@ -7,18 +7,25 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "apollo-server": "2",
+    "concurrently": "^6.2.1",
     "graphql": "^15.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "subscriptions-transport-ws": "^0.9.19",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start:client": "react-scripts start",
+    "build:client": "react-scripts build",
+    "test:client": "react-scripts test",
+    "eject:client": "react-scripts eject",
+    "start:server": "cd server && node index.js",
+    "dev:server": "cd server && nodemon index.js",
+    "dev": "concurrently \"npm run start:client\" \"npm run dev:server\"",
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\""
   },
   "eslintConfig": {
     "extends": [
@@ -37,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }
