@@ -12,6 +12,7 @@ function Popup({ data, removeData }) {
       <h2>New Blog</h2>
       <h3>{data?.newBlog?.title}</h3>
       <p>{data?.newBlog?.desc}</p>
+      <div className="new_blog__popup__progress_bar"></div>
     </div>
   );
 }

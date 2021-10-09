@@ -48,7 +48,6 @@
   },
   "devDependencies": {
     "apollo-server-testing": "^2.25.2",
-    "jest": "^27.2.5",
     "nodemon": "^2.0.13"
   }
 }
