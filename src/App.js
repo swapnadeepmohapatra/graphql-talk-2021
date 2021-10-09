@@ -3,7 +3,7 @@ import { useQuery, gql } from "@apollo/client";
 import Card from "./Card";
 
 const GET_BLOGS = gql`
-  {
+  query GetBlogs {
     blogs {
       title
       id
