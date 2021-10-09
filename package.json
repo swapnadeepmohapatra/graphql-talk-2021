@@ -25,7 +25,8 @@
     "start:server": "cd server && node index.js",
     "dev:server": "cd server && nodemon index.js",
     "dev": "concurrently \"npm run start:client\" \"npm run dev:server\"",
-    "start": "concurrently \"npm run start:client\" \"npm run start:server\""
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +47,8 @@
     ]
   },
   "devDependencies": {
+    "apollo-server-testing": "^2.25.2",
+    "jest": "^27.2.5",
     "nodemon": "^2.0.13"
   }
 }
