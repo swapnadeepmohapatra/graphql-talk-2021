@@ -4,7 +4,7 @@ import Card from "./Card";
 import Add from "./Add";
 
 const GET_BLOGS = gql`
-  {
+  query GetBlogs {
     blogs {
       title
       id
