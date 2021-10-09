@@ -3,7 +3,11 @@ import React from "react";
 function Card({ data }) {
   return (
     <div className="blog__card">
-      <img src={data?.cover_image} alt="" className="blog__card__cover_image" />
+      <img
+        src={data?.cover_image}
+        alt={`${data?.title}-cover`}
+        className="blog__card__cover_image"
+      />
       <h2 className="blog__card__title">{data?.title}</h2>
       <p className="blog__card__desc">{data?.desc}</p>
       <div className="blog__card__author">
