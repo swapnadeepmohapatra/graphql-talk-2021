@@ -6,7 +6,7 @@ import Popup from "./Popup";
 import { useEffect, useState } from "react";
 
 const GET_BLOGS = gql`
-  {
+  query GetBlogs {
     blogs {
       title
       id
@@ -20,7 +20,7 @@ const GET_BLOGS = gql`
 `;
 
 const NEW_BLOG_ADDED = gql`
-  subscription {
+  subscription NewBlogAdded {
     newBlog {
       title
       id
