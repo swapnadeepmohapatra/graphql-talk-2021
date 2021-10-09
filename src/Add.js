@@ -35,6 +35,7 @@ function Add() {
     e.preventDefault();
     addBlog();
     setDialogOpen(false);
+    setState({ title: "", desc: "" });
   };
 
   const handleOnChange = (e) => {
